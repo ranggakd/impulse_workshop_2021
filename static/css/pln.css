@@ -1,0 +1,76 @@
+/*
+ * PLN Pusdiklat
+ *
+ * This style is used instead write any styles inline on html
+ *
+ */
+ html *
+ {
+     font-family: Segoe UI, Roboto, Helvetica Neue, sans-serif !important;
+ }
+ 
+ /* signin background */
+ #bg1
+ {
+     background-image: url('/static/img/pln_1.jpg');
+     background-size: cover;
+ }
+ #bg2
+ {
+     background-image: url('/static/img/pln_2.jpg');
+     background-size: cover;
+ }
+ #bg3
+ {
+     background-image: url('/static/img/pln_3.jpg');
+     background-size: cover;
+ }
+ #bg4
+ {
+     background-image: url('/static/img/pln_4.jpg');
+     background-size: cover;
+ }
+ 
+ /* color */
+ .gr1
+ {
+     color: #1b2e4b !important;
+ }
+ .pln-inherit{
+     color: inherit !important;
+ }
+ .pln-yl
+ {
+     background-color: #efe62f !important;
+ }
+ .pln-gr
+ {
+     background-color: #D9D9D9 !important;
+ }
+ .pln-vr-lb
+ {
+     background-color: #E7F6F9 !important;
+ }
+ 
+ /* button color */
+ .btn-pln-b
+ {
+     background-color: #14a2ba !important;
+     border-color: #14a2ba !important;
+ }
+ .btn-pln-lb /*filter*/
+ {
+     background-color: #a6ced5 !important;
+     border-color: #a6ced5 !important;
+ }
+ .btn-pln-gr
+ {
+     background-color: #d9d9d9 !important;
+     border-color: #d9d9d9 !important;
+ }
+ 
+ /* card qna */
+ .mg-hr-t
+ {
+     margin-top: 0 !important;
+ }
