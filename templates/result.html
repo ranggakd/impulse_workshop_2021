@@ -45,36 +45,25 @@
     <div class="content content-components" style="margin-right: 50px !important;">
       <div class="container" style="max-width: 950px !important;">
         <h1 class="df-title" id="section1">Hasil</h1>
-        <p class="df-lead"><strong>DD Arcana</strong> atau <strong>D</strong>eteksi <strong>D</strong>ini Pengur<strong>a</strong>ngan <strong>R</strong>esiko Ben<strong>cana</strong> merupakan Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <p class="df-lead"><strong>DD Arcana</strong> atau <strong>D</strong>eteksi <strong>D</strong>ini Pengur<strong>a</strong>ngan <strong>R</strong>esiko Ben<strong>cana</strong></p>
         <div class="media d-block d-sm-flex">
-            <img src="{{url_for('static', filename='img/cloud.jpg')}}" class="wd-100p wd-sm-200 rounded mg-sm-r-20 mg-b-20 mg-sm-b-0" alt="">
+          {% for key, val in result_dict|dictsort(case_sensitive=true, reverse=true) %}
+            {% if loop.first %}
+            <img src="data:image/png;base64,{{val}}" class="img-fluid wd-100p wd-sm-200 rounded mg-sm-r-20 mg-b-20 mg-sm-b-0" alt="">
+            {% else %}
             <div class="media-body">
                 <h5 class="mg-b-15 tx-inverse">Hasil Prediksi / Deteksi</h5>
                 <div class="row row-sm">
                     <div class="col-md-3">
-                        Attr1:
+                        {{key}}:
                     </div>
                     <div class="col-md">
-                        0.99
-                    </div>
-                </div>
-                <div class="row row-sm">
-                    <div class="col-md-3">
-                        Attr2:
-                    </div>
-                    <div class="col-md">
-                        0.99
-                    </div>
-                </div>
-                <div class="row row-sm">
-                    <div class="col-md-3">
-                        Attr3:
-                    </div>
-                    <div class="col-md">
-                        0.99
+                        {{val}}
                     </div>
                 </div>
             </div>
+              {% endif %}
+            {% endfor %}
         </div>
         <footer class="content-footer">
           <div>
@@ -85,7 +74,6 @@
 
       </div><!-- container -->
     </div><!-- content -->
-    <script src="assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
     <script src="{{url_for('static', filename='lib/jquery/jquery.min.js')}}"></script>
     <script src="{{url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{url_for('static', filename='lib/feather-icons/feather.min.js')}}"></script>

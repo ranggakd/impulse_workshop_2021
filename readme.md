@@ -1,6 +1,6 @@
 # Final Project Impulse Workshop
 
-## Demo Program
+## Demo Program (Flask)
 
 1. Instalasi dengan command `pip install -r requirement.txt`
 
